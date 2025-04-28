@@ -31,28 +31,29 @@
     }
 
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      background-size: cover;
-      font-family: 'OneUISans', sans-serif;
-      color: white;
-      background: linear-gradient(
-      to bottom,
-      #55CDFC 0%,
-      #55CDFC 20%,
-      #F7A8B8 20%,
-      #F7A8B8 40%,
-      white 40%,
-      white 60%,
-      #F7A8B8 60%,
-      #F7A8B8 80%,
-      #55CDFC 80%,
-      #55CDFC 100%
-    );
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #55CDFC 0%,
+    #55CDFC 20%,
+    #F7A8B8 20%,
+    #F7A8B8 40%,
+    white 40%,
+    white 60%,
+    #F7A8B8 60%,
+    #F7A8B8 80%,
+    #55CDFC 80%,
+    #55CDFC 100%
+  );
+  background-size: cover; /* <-- move this after background! */
+  background-repeat: no-repeat; /* <-- good practice */
+  font-family: 'OneUISans', sans-serif;
+  color: white;
+}
     
     .scroll-container {
       display: flex;
