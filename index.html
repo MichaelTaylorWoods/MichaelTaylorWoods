@@ -247,7 +247,10 @@
     }
     
     .big-card {
-  max-width: 400px;
+  max-width: 300px;
+  height: auto;
+  padding-top: 1px;
+  padding-bottom: 30px;
 }
 
 .photo-grid {
@@ -261,7 +264,11 @@
   width: 100%;
   border-radius: 15px;
   object-fit: cover;
-  height: 140px;
+  height: 150px;
+}
+
+.photo-grid a {
+  display: block;
 }
   </style>
 </head>
@@ -294,12 +301,20 @@
   <div class="card big-card">
     <h1>Photos</h1>
     <div class="photo-grid">
-      <img src="assets/images/IMG_0030.jpeg" alt="Photo 1">
-      <img src="assets/images/IMG_7622.jpeg" alt="Photo 2">
-      <img src="assets/images/Snapchat-1143537621_Original.jpeg" alt="Photo 3">
-      <img src="assets/images/Snapchat-1479768942_Original.jpeg" alt="Photo 4">
-    </div>
-  </div>
+  <a href="assets/images/IMG_0030.jpeg" target="_blank">
+    <img src="assets/images/IMG_0030.jpeg" alt="Photo 1">
+  </a>
+  <a href="assets/images/IMG_7622.jpeg" target="_blank">
+    <img src="assets/images/IMG_7622.jpeg" alt="Photo 2">
+  </a>
+  <a href="assets/images/Snapchat-1143537621_Original.jpeg" target="_blank">
+    <img src="assets/images/Snapchat-1143537621_Original.jpeg" alt="Photo 3">
+  </a>
+  <a href="assets/images/Snapchat-1479768942_Original.jpeg" target="_blank">
+    <img src="assets/images/Snapchat-1479768942_Original.jpeg" alt="Photo 4">
+  </a>
+</div>
+</div>
 </div>
 </div>
 </div>
