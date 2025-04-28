@@ -48,8 +48,8 @@
     #55CDFC 80%,
     #55CDFC 100%
   );
-  background-size: cover; /* <-- move this after background! */
-  background-repeat: no-repeat; /* <-- good practice */
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'OneUISans', sans-serif;
   color: black;
 }
@@ -85,7 +85,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease; /* <--- add this */
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -158,13 +158,13 @@
       border-radius: 15px;
       margin-top: 20px;
       cursor: pointer;
-      transition: background 0.3s, transform 0.1s ease-in-out; /* Added transform transition */
+      transition: background 0.3s, transform 0.1s ease-in-out;
       text-decoration: none;
       color: black;
     }
 
     .project-card:active {
-      transform: scale(0.9) translateY(2px); /* Scale down and move down slightly on press */
+      transform: scale(0.9) translateY(2px);
     }
 
     .project-card:hover {
@@ -224,7 +224,23 @@
     }
 
     .phone-number-button {
-      background-color: rgba(0, 128, 0, 1); /* Green */
+      background-color: limegreen; /* Bright Green */
+    }
+
+    .phone-icon {
+      content: url('assets/images/IMG_0198.jpeg'); /* Phone Icon */
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .snapchat-icon {
+      content: url('assets/images/IMG_9752.jpeg'); /* Snapchat Icon */
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
     }
   </style>
 </head>
@@ -244,12 +260,12 @@
       <div class="card">
         <h1>My Snapchat & Number</h1>
         <a href="https://snapchat.com/t/3KqvuDxX" class="project-card snapchat-button" target="_blank">
-          <img src="assets/images/IMG_9752.jpeg" alt="Project Logo">
-          <span>Snapchat</span>
+          <img src="assets/images/IMG_9752.jpeg" alt="Snapchat Logo" class="project-card-icon">
+          <span><span class="snapchat-icon"></span>Snapchat</span>
         </a>
         <a href="tel:+447587123972" class="project-card phone-number-button">
-          <img src="assets/images/IMG_9752.jpeg" alt="Project Logo">
-          <span>Phone Number</span>
+          <img src="assets/images/IMG_0198.jpeg" alt="Phone Icon" class="project-card-icon">
+          <span><span class="phone-icon"></span>Phone Number</span>
         </a>
       </div>
     </div>
@@ -292,13 +308,12 @@
     window.addEventListener('orientationchange', fixHeight);
     fixHeight();
 
-    // Optional: Remove active state after a short delay for a cleaner animation
     projectCards.forEach(card => {
       card.addEventListener('mouseup', () => {
-        setTimeout(() => card.classList.remove('active'), 100); // Adjust delay as needed
+        setTimeout(() => card.classList.remove('active'), 100);
       });
       card.addEventListener('mouseleave', () => {
-        card.classList.remove('active'); // Ensure it returns to normal if mouse leaves during press
+        card.classList.remove('active');
       });
     });
   </script>
