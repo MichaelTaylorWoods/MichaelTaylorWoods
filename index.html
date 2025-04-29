@@ -269,6 +269,21 @@
 .photo-grid a {
   display: block;
 }
+
+    .video-container {
+  margin-top: 20px; /* Add some space between the grid and the video */
+  border-radius: 8px;
+  overflow: hidden; /* Hide any potential overflow from video controls */
+  width: 100%; /* Make the container take the full width of the card */
+}
+
+.video-container video {
+  display: block;
+  width: 100%; /* Make the video fill the width of its container */
+  aspect-ratio: 16 / 9; /* Set a common landscape aspect ratio */
+  border-radius: 8px;
+  object-fit: cover; /* Ensure the video covers the area without distortion */
+}
   </style>
 </head>
 
